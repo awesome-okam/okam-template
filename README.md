@@ -1,4 +1,4 @@
-OKAM Project Template
+Okam Project Template
 ====
 
 > 基于 `okam` 开发框架开发的小程序项目模板
