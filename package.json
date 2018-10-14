@@ -1,0 +1,55 @@
+{
+  "private": true,
+  "name": "okam-template",
+  "version": "0.1.0",
+  "description": "<project description>",
+  "main": "index.js",
+  "scripts": {
+    "lint": "fecs ./src --reporter=baidu --rule --type=vue,js",
+    "build": "cross-env NODE_ENV=dev node scripts/build.js --clean",
+    "prod": "node scripts/build.js --clean",
+    "dev": "cross-env NODE_ENV=dev node scripts/build.js --watch",
+    "dev:clean": "cross-env NODE_ENV=dev node scripts/build.js --watch --clean",
+    "dev:server": "cross-env NODE_ENV=dev node scripts/build.js --watch --server",
+    "dev:wx": "cross-env NODE_ENV=dev node scripts/build.js --watch --type wx",
+    "dev:wx:clean": "cross-env NODE_ENV=dev node scripts/build.js --watch --clean --type wx",
+    "prod:wx": "node scripts/build.js --clean --type wx"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "linters": {
+      "*.{js,vue}": [
+        "fecs --reporter=baidu --rule --type=vue,js"
+      ]
+    },
+    "ignore": [
+      "dist/**/*"
+    ]
+  },
+  "author": "<author>",
+  "devDependencies": {
+    "@babel/core": "^7.1.0",
+    "chalk": "^2.4.1",
+    "cross-env": "^5.2.0",
+    "express": "^4.16.3",
+    "fecs": "^1.6.2",
+    "husky": "^1.0.0",
+    "lint-staged": "^7.3.0",
+    "okam-build": "^0.2.1-alpha.0",
+    "okam-plugin-tinyimg": "^0.1.0",
+    "postcss": "^7.0.3",
+    "postcss-url": "^8.0.0",
+    "rider": "^2.0.0",
+    "stylus": "^0.54.5"
+  },
+  "engine": {
+    "node": ">= 8"
+  },
+  "dependencies": {
+    "okam-core": "^0.2.1-alpha.0"
+  }
+}
