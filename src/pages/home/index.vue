@@ -1,33 +1,39 @@
 <template>
     <import src="../../common/tpl/footer.tpl"/>
     <view class="home-wrap">
-        <button plain class="hello-btn" @click="onHello">{{btnText}}</button>
+        <hello :from="from" @hello="handleHello"></hello>
         <view class="click-tip" if="clicked">You click me~</view>
     </view>
     <tpl is="page-footer"/>
 </template>
 <script>
+import Hello from '../../components/Hello';
 
 export default {
     config: {
         title: 'Page Title'
     },
 
+    components: {
+        Hello
+    },
+
     data: {
         btnText: 'Hello',
-        clicked: false
+        clicked: false,
+        from: 'HomePage'
     },
 
     methods: {
 
-        onHello() {
-            this.$api.showToast({
-                title: 'Hello',
-                duration: 3000
-            });
-
+        handleHello(e) {
             this.clicked = true;
             this.btnText = 'You clicked';
+
+            this.$api.showToast({
+                title: 'Received Hello',
+                duration: 3000
+            });
         }
     }
 };
@@ -41,15 +47,6 @@ export default {
     height: 100vh
     box-sizing: border-box
     background: #ddd
-
-    .hello-btn
-        width: 846px
-        height: 148px
-        line-height: @height
-        background: #fff
-        text-align: center
-        border-radius: 120px
-        border: none
 
     .click-tip
         margin-top: 100px
