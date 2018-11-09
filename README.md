@@ -13,27 +13,37 @@ Okam Project Template
 
 ### 开发
 
-* 带 watch 开发模式：`npm run dev`
+* 百度小程序运行命令
 
-* 删掉构建产物（不包括项目配置文件）并重新构建且带 watch 开发模式：`npm run dev:clean`
+    * 带 watch 开发模式：`npm run dev`
 
-* 带 watch && 开发 Server 开发模式：`npm run dev:server`
+    * 删掉构建产物（不包括项目配置文件）并重新构建且带 watch 开发模式：`npm run dev:clean`
 
-* 删掉构建重新构建：`npm run build`
+    * 带 watch && 开发 Server 开发模式：`npm run dev:server`
 
-* 删掉构建产物：`npm run clean`
+    * 删掉构建重新构建（没有 watch && 开发 Server）：`npm run build`
 
-* 生产环境构建：`npm run prod`
+    * 生产环境构建：`npm run prod`
 
-* 删掉构建产物：`npm run clean`
+* 微信小程序运行命令
 
-* 生产环境构建：`npm run prod`
+    * 微信小程序开发构建：`npm run dev:wx`
 
-* 微信小程序开发构建：`npm run dev:wx`
+    * 微信小程序：删掉构建产物（不包括项目配置文件）并重新构建且带 watch 开发模式：`npm run dev:wx:clean`
 
-* 微信小程序：删掉构建产物（不包括项目配置文件）并重新构建且带 watch 开发模式：`npm run dev:wx:clean`
+    * 带 watch && 开发 Server 开发模式：`npm run dev:wx:server`
 
-* 微信小程序生产环境构建：`npm run prod:wx`
+    * 微信小程序生产环境构建：`npm run prod:wx`
+
+* 支付宝小程序运行命令
+
+    * 微信小程序开发构建：`npm run dev:ant`
+
+    * 微信小程序：删掉构建产物（不包括项目配置文件）并重新构建且带 watch 开发模式：`npm run dev:ant:clean`
+
+    * 带 watch && 开发 Server 开发模式：`npm run dev:ant:server`
+
+    * 微信小程序生产环境构建：`npm run prod:ant`
 
 ### 目录结构说明
 

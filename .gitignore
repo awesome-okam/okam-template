@@ -75,6 +75,7 @@ Thumbs.db
 /dist
 /dll
 /wx_dist
+/ant_dist
 
 # lock file
 package-lock.json

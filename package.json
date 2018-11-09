@@ -14,7 +14,11 @@
     "dev:wx": "cross-env NODE_ENV=dev node scripts/build.js --watch --type wx",
     "dev:wx:server": "cross-env NODE_ENV=dev node scripts/build.js --watch --server --type wx",
     "dev:wx:clean": "cross-env NODE_ENV=dev node scripts/build.js --watch --clean --type wx",
-    "prod:wx": "node scripts/build.js --clean --type wx"
+    "prod:wx": "node scripts/build.js --clean --type wx",
+    "dev:ant": "cross-env NODE_ENV=dev node scripts/build.js --watch --type ant",
+    "dev:ant:server": "cross-env NODE_ENV=dev node scripts/build.js --watch --server --type ant",
+    "dev:ant:clean": "cross-env NODE_ENV=dev node scripts/build.js --watch --clean --type ant",
+    "prod:ant": "node scripts/build.js --clean --type ant"
   },
   "husky": {
     "hooks": {
@@ -34,6 +38,7 @@
   "author": "<author>",
   "devDependencies": {
     "@babel/core": "^7.1.0",
+    "@babel/preset-env": "^7.1.5",
     "autoresponse": "^0.2.2",
     "chalk": "^2.4.1",
     "connect": "^3.6.6",
@@ -42,7 +47,7 @@
     "fecs": "^1.6.2",
     "husky": "^1.0.0",
     "lint-staged": "^7.3.0",
-    "okam-build": "^0.3.0-alpha.0",
+    "okam-build": "^0.3.0",
     "okam-plugin-tinyimg": "^0.1.0",
     "postcss": "^7.0.3",
     "postcss-url": "^8.0.0",
@@ -53,6 +58,6 @@
     "node": ">= 8"
   },
   "dependencies": {
-    "okam-core": "^0.3.0-alpha.0"
+    "okam-core": "^0.3.0"
   }
 }
