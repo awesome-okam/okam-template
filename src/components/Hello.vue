@@ -31,12 +31,17 @@ export default {
     margin: 20px 0
 
     .hello-btn
-        width: 846px
+        width: 500px
         height: 148px
         margin: 0 auto
+        -quick-margin: 0
+        -quick-justify-content: center
+        -quick-align-items: center
         line-height: @height
-        background: #fff
+        background-color: #fff
         text-align: center
         border-radius: 120px
-        border: none
+        border: 0
+        &:after
+            -tt-border: none
 </style>

@@ -1,6 +1,6 @@
 /**
- * @file Build weixin mini program build config
- * @author <author>
+ * @file Build toutiao mini program config
+ * @author xxx
  */
 
 'use strict';
@@ -9,13 +9,11 @@ const merge = require('okam-build').merge;
 
 module.exports = merge({}, require('./base.config'), {
     output: {
-        dir: 'wx_dist',
+        dir: 'tt_dist',
         depDir: 'src/common'
     },
 
-    localPolyfill: [
-        'async'
-    ],
+    polyfill: ['async'],
 
     dev: {
         processors: {

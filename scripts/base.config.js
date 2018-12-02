@@ -21,22 +21,22 @@ module.exports = {
         extname: 'vue',
         template: {
             transformTags: {
-                // div p 将转为 view 标签
-                view: ['div', 'p'],
-                // a 将标签转为 navigator 标签，href 属性 转为 url 属性
-                navigator: {
-                    tag: 'a',
+                div: 'view',
+                p: 'view',
+                a: {
+                    tag: 'navigator',
                     href: 'url'
                 },
-                // img 将转为 image 标签
-                image: 'img'
+                img: 'image'
             }
         }
     },
     framework: [
         'data'
+        // 'watch',
         // 'ref'
     ],
+    designWidth: 750,
     processors: {
         babel7: {
             extnames: ['js']
@@ -51,12 +51,7 @@ module.exports = {
         postcss: {
             extnames: ['styl'],
             options: {
-                plugins: {
-                    px2rpx: {
-                        // 设计稿尺寸
-                        designWidth: 1242
-                    }
-                }
+                plugins: ['px2rpx', 'env']
             }
         }
     },
@@ -67,8 +62,7 @@ module.exports = {
         middlewares: [
             // name: 'autoresponse',
             // options: {
-
-            //}
+            // }
         ]
     },
 

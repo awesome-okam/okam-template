@@ -1,5 +1,15 @@
 {
-    appid: "0",
+    appid: '0',
     description: '<mini program description>',
-    projectname: 'okam-template'
+    projectname: 'okam-template',
+    _ttEnv: {
+        appid: '体验appId',
+        setting: {
+            urlCheck: true,
+            es6: true,
+            postcss: true,
+            minified: true,
+            newFeature: true
+        }
+    }
 }

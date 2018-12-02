@@ -12,6 +12,7 @@ module.exports = merge({}, require('./base.config'), {
         dir: 'ant_dist',
         depDir: 'src/common'
     },
+
     processors: {
         babel7: {
             options: {
