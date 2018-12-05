@@ -13,7 +13,7 @@ module.exports = merge({}, require('./base.config'), {
         depDir: 'src/common'
     },
 
-    polyfill: ['async'],
+    localPolyfill: ['async'],
 
     dev: {
         processors: {
