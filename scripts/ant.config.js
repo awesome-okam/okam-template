@@ -15,8 +15,24 @@ module.exports = merge({}, require('./base.config'), {
 
     processors: {
         babel7: {
+            hook: {
+                before(file, options) {
+                    if (file.path.indexOf('/@babel/runtime/helpers/') !== -1) {
+                        options.plugins = [];
+                        options.presets = [];
+                    }
+                }
+            },
             options: {
-                presets: ['@babel/preset-env']
+                presets: ['@babel/preset-env'],
+                plugins: [
+                    ['@babel/plugin-transform-runtime', {
+                        corejs: false,
+                        helpers: true,
+                        regenerator: false,
+                        useESModules: false
+                    }]
+                ]
             }
         }
     }
