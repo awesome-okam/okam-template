@@ -47,7 +47,7 @@
     "@babel/core": "^7.1.0",
     "@babel/plugin-transform-runtime": "^7.2.0",
     "@babel/preset-env": "^7.1.5",
-    "autoresponse": "^0.2.2",
+    "autoresponse": "^0.3.0",
     "chalk": "^2.4.1",
     "connect": "^3.6.6",
     "cross-env": "^5.2.0",
@@ -55,6 +55,7 @@
     "fecs": "^1.6.2",
     "husky": "^1.0.0",
     "lint-staged": "^7.3.0",
+    "okam-build": "^0.4.0",
     "okam-plugin-tinyimg": "^0.1.0",
     "postcss": "^7.0.3",
     "postcss-url": "^8.0.0",
@@ -67,6 +68,6 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.2.0",
-    "okam-core": "^0.4.0-beta.1"
+    "okam-core": "^0.4.0"
   }
 }
